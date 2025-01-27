@@ -1,0 +1,417 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9fafb;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header and Navigation */
+.header {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+.nav-links a span {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover span:hover {
+  color: #bfdbfe;
+}
+
+.sign-up-btn {
+  background-color: white;
+  color: #2563eb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sign-up-btn:hover {
+  background-color: #f8fafc;
+}
+
+/* Hero Section */
+.hero {
+  padding: 5rem 0;
+}
+
+.hero-content {
+  max-width: 48rem;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3.75rem;
+  }
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #bfdbfe;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  max-width: 32rem;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+}
+
+.search-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Stats Section */
+.stats {
+  padding: 3rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  margin: 0 auto 1rem;
+  color: #2563eb;
+}
+
+.stat-number {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #6b7280;
+}
+
+/* Opportunities Section */
+.opportunities {
+  padding: 3rem 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.view-all {
+  display: flex;
+  align-items: center;
+  color: #2563eb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.view-all:hover {
+  color: #1d4ed8;
+}
+
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .opportunities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.opportunity-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.opportunity-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.opportunity-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.opportunity-content {
+  padding: 1.5rem;
+}
+
+.opportunity-category {
+  font-size: 0.875rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.opportunity-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.opportunity-org {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.opportunity-meta {
+  display: flex;
+  align-items: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.opportunity-meta svg {
+  margin-right: 0.5rem;
+}
+
+.learn-more-btn {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.learn-more-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* CTA Section */
+.cta {
+  background-color: #2563eb;
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cta h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.cta p {
+  font-size: 1.25rem;
+  color: #bfdbfe;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background-color: white;
+  color: #2563eb;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cta-btn:hover {
+  background-color: #f8fafc;
+}
+
+/* Footer */
+.footer {
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+.footer-content {
+  padding: 3rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.footer h3 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.newsletter-form {
+  display: flex;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  outline: none;
+}
+
+.newsletter-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.newsletter-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding: 1rem 0;
+  font-size: 0.875rem;
+}
